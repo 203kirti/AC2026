@@ -1,0 +1,31 @@
+### POTD #5 ► 05/01/2024
+Task 2️⃣ : [Valid Anagram](https://leetcode.com/problems/valid-anagram/)
+
+solutions
+---------------------------------------
+class Solution {
+   
+    public static String sortString(String inputString) {
+        char tempArray[] = inputString.toCharArray();
+        Arrays.sort(tempArray);
+        String s = new String (tempArray);
+        return s;
+    }
+    
+       public boolean isAnagram(String s, String t){ 
+        if(s.length() != t.length())
+        return false;
+        String s1= sortString(s);
+        String s2= sortString(t);
+        System.out.println(s1);
+        System.out.println(s2);
+for(int i = 0; i< s1.length() ; i++)
+{
+    if ( s1.charAt(i) == s2.charAt(i));
+    else
+    return false;
+
+}
+       return true;
+}
+}
