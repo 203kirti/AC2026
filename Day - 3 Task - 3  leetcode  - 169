@@ -1,0 +1,10 @@
+### POTD #3 ► 03/01/2024 
+Task 2️⃣ : [Majority Element](https://leetcode.com/problems/majority-element/)
+solutions-------------------------------------------------
+
+class Solution {
+    public int majorityElement(int[] nums) {
+        Arrays.sort(nums);
+        return nums[nums.length/2];
+    }
+}
