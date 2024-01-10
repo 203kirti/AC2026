@@ -1,0 +1,25 @@
+Task 2️⃣ : [Missing Number](https://leetcode.com/problems/missing-number/description/)
+
+Question - Missing number - leetcode 268
+
+solution------------------------------------------------
+
+import java.util.*;
+class Solution 
+{
+    public int missingNumber(int[] nums)
+     {
+        int n=nums.length;
+        Arrays.sort(nums);
+        int j=0;
+        int flag=0;
+        for(j=0;j<n;j++)
+        {
+            if ( nums[j] != j)
+          {  flag=1;
+            break;
+        }
+        }
+        return j;
+    }
+    }
