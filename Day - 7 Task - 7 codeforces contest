@@ -1,0 +1,21 @@
+//### POTD #7 ► 07/01/2024
+//Task 2️⃣ : [Short Sort](https://codeforces.com/contest/1873/problem/A)
+//time complexity = O(n)
+// Topic - STRING
+import java.util.*;
+public class codeforces {
+	    public static void main(String[] args) {
+	      Scanner sc=new Scanner (System.in);
+	      int t=sc.nextInt();  //number of test cases
+	      while(t>0)
+	      {
+	      String str=sc.next();     //string input
+	      if(str.charAt(0)=='a' || str.charAt(1)=='b' ||str.charAt(2)=='c' )  //if a,b,c anyone is at right place rest two can be swapped
+	      System.out.println("yes");
+	      else
+	       System.out.println("no");
+	      t--;
+	      }
+	    }
+ 
+}
