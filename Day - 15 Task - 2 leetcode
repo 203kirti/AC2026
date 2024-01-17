@@ -1,0 +1,25 @@
+//### POTD #15 ► 15/01/2024 
+//Task 2️⃣ : [Lexicographically Smallest Palindrome](https://leetcode.com/problems/lexicographically-smallest-palindrome/description/)
+//Topics - array and string //created a character array
+class Solution {
+    public String makeSmallestPalindrome(String s) {
+        int n = s.length();
+        char a[] = new char[n];
+        int i = 0, j = n - 1;
+        for (i = 0, j = n - 1; i < n && j >= 0; i++, j--) {
+            if (s.charAt(i) != s.charAt(j)) {
+                if (s.charAt(i) < s.charAt(j)) {
+                    a[i] = s.charAt(i);
+                    a[j] = s.charAt(i);
+                } else {
+                    a[i] = s.charAt(j);
+                    a[j] = s.charAt(j);
+                }
+            } else {
+                a[i] = s.charAt(i);
+                a[j] = s.charAt(i);
+            }
+        }
+        return (new String(a));
+    }
+}
