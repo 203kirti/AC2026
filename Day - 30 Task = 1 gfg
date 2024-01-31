@@ -1,0 +1,14 @@
+//### POTD #29 ► 30/01/2024 
+//Task 1️⃣ : [ Number of occurrence](https://www.geeksforgeeks.org/problems/number-of-occurrence2259/1)
+//method used = linear  search count 
+//Time complexity = O(n)
+class Solution {
+    int count(int[] arr, int n, int x) {
+    int c=0;
+    for(int i=0;i<n;i++){
+        if(arr[i]==x)
+        c++;
+    }
+    return c;
+    }
+}
