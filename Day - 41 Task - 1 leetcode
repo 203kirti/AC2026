@@ -1,0 +1,10 @@
+//POTD #41 ► 12/02/2024  
+//Task 1️⃣ : [Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/?envType=list&envId=rrs3r4z6)
+class Solution {
+    public void deleteNode(ListNode node) {
+        ListNode n=node.next;
+        //int data=n.data;
+        node.val=n.val;
+        node.next=n.next;
+    }
+}
