@@ -1,0 +1,23 @@
+//**POTD #40 ► 10/02/2024
+//Task 1️⃣ : [ Heaters ](https://leetcode.com/problems/heaters/)
+//bruteforce
+//Time comp = O(N2)
+class Solution {
+    public int findRadius(int[] hs, int[] ht) {
+        Arrays.sort(hs);
+        Arrays.sort(ht);
+        ArrayList <Integer> arr=new ArrayList<Integer>();
+        for(int i=0;i<hs.length;i++){
+            int low=Integer.MAX_VALUE;
+            {
+                for(int j=0;j<ht.length;j++){
+                    int k=Math.abs(hs[i]-ht[j]);
+                    low=Math.min(low,k);
+                }
+                arr.add(low);
+            }
+        }
+        int m=Collections.max(arr);
+        return m;
+    }
+}
