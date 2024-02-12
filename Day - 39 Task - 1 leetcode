@@ -1,0 +1,25 @@
+//**POTD #39 ► 09/02/2024** 
+//Task 1️⃣ : [ Find Peak Element ](https://leetcode.com/problems/find-peak-element/description/)
+//Time c = O(logN) Binary Search
+class Solution {
+    public int findPeakElement(int[] nums) {
+        if(nums.length==0 )
+        return 0;
+        int si=0, ei=nums.length-1,mid=si+(ei-si)/2;
+        int ans=0; //answer
+        while(si<=ei){
+            mid=si+(ei-si)/2 ;
+            if(mid-1 >=0 && nums[mid] > nums[mid-1]){
+                si=mid+1;
+                ans=mid;
+            }
+            else if(mid==0){
+                si=1;
+            }
+            else{
+                ei=mid-1;
+            }
+        }
+        return ans;
+    }
+}
