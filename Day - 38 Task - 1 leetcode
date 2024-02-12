@@ -1,0 +1,23 @@
+//**POTD #38 ► 08/02/2024**
+//Task 1️⃣ : [ Find the Smallest Divisor Given a Threshold ](https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/description/)
+//Binary Search
+class Solution {
+    public int smallestDivisor(int[] nums, int threshold) {
+        Arrays.sort(nums);
+        int si=1 , ei = nums[nums.length-1],ans=ei;
+        while(si <= ei){
+            int sum=0;
+            int mid = si+(ei-si)/2;
+            for(int i=0; i < nums.length; i++){
+               // sum += (int)Math.ceil((double(nums[i]))/double(mid)) ;
+               sum= sum + (int)Math.ceil ((double)nums[i]/(double)mid);
+            }
+            if(sum <=threshold){
+            ans=mid;
+            ei=mid-1;
+            }
+            else
+            si=mid+1;
+        }
+    return ans;}
+}
